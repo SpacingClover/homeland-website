@@ -1,0 +1,56 @@
+:root{
+  --BACKGROUD-ORANGE:#F34B00;
+  --BODY-ORANGE:#FF6100;
+}
+
+body{
+  background-color: var(--BACKGROUD-ORANGE);
+}
+
+#main{
+  width: 70%;
+  height: 100vh;
+  margin: auto;
+}
+
+#header{
+  background-color: var(--BACKGROUD-ORANGE);
+}
+
+#content{
+  width: 100%;
+  height: 100%;
+  background-color: var(--BODY-ORANGE);
+}
+
+#title{
+  margin-bottom: 0px;
+  filter: brightness(140%);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.flexbox{
+  display: flex;
+  padding: 0px;
+}
+
+#navbar{
+  justify-content: space-around;
+}
+
+.navbaritem{
+  display: inline;
+  margin: none;
+}
+
+a{
+  color: yellow;
+  text-decoration: none;
+  font-size: 2em;
+}
