@@ -1,10 +1,21 @@
 :root{
   --BACKGROUD-ORANGE:#F34B00;
   --BODY-ORANGE:#FF6100;
+  --DARKEST-ORANGE:#B01700;
 }
 
 body{
   background-color: var(--BACKGROUD-ORANGE);
+  padding-top: 1em;
+}
+
+p{
+  display: inline;
+  color: var(--DARKEST-ORANGE);
+}
+
+a{
+  color: yellow;
 }
 
 #main{
@@ -49,8 +60,14 @@ body{
   margin: none;
 }
 
-a{
+.navbara{
   color: yellow;
   text-decoration: none;
   font-size: 2em;
+}
+
+
+
+#surveycontainer{
+  height: 100%;
 }
