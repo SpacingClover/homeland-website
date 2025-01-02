@@ -10,7 +10,14 @@ body{
 }
 
 p{
-  display: inline;
+  color: var(--DARKEST-ORANGE);
+}
+
+h1{
+  color: var(--DARKEST-ORANGE);
+}
+
+h2{
   color: var(--DARKEST-ORANGE);
 }
 
@@ -20,6 +27,16 @@ li{
 
 a{
   color: yellow;
+}
+
+hr{
+  background-color: var(--BACKGROUD-ORANGE);
+  height: 5px;
+  border: none;
+}
+
+span{
+  font-weight: bold;
 }
 
 #main{
@@ -33,9 +50,9 @@ a{
 }
 
 #content{
+  background-color: var(--BODY-ORANGE);
   width: 90%;
   height: 100%;
-  background-color: var(--BODY-ORANGE);
   padding: 5%;
 }
 
@@ -75,8 +92,8 @@ a{
 }
 
 .container{
-  display: inline;
   background-color: var(--BACKGROUD-ORANGE);
+  display: inline;
   padding: 10px;
   border-radius: 10px;
   margin: 5px;
@@ -88,15 +105,15 @@ a{
 }
 
 .navbaritem:hover > .letter-anim{
-  animation: anim 0.5s infinite;
+  animation: anim 1s infinite;
   animation-delay: calc(0.1s * var(--i));
 }
 
 @keyframes anim {
-  0%,100%{
+  0%,50%,100%{
     transform: translateY(0px);
   }
-  50%{
+  25%{
     transform: translateY(-10px);
   }
 }

@@ -2,6 +2,7 @@ function eachLetterSpan(element,string){
   for(let i=0;i<string.length;i++){
     if(string[i] == " "){
       let p = document.createElement('p');
+      p.style.display = "inline";
       p.innerHTML = " ";
       element.appendChild(p);
     }else{
