@@ -117,3 +117,24 @@ span{
     transform: translateY(-10px);
   }
 }
+
+.hbox{
+  display: flex;
+  flex-direction: row;
+}
+
+.box{
+  flex: 50%;
+}
+
+@media (max-width: 800px) {
+  .hbox{
+      flex-direction: column;
+  }
+  #main{
+    width: 100%;
+  }
+  .box{
+    flex: 100%;
+  }
+}
