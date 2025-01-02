@@ -17,14 +17,14 @@ function eachLetterSpan(element,string){
 
 function populateNavbar(){
   const navbar = document.getElementById('navbar');
-  const pageNames = ["index","gameplay","download","playtesting","press kit","contact"];
+  const pageNames = ["index","Gameplay","Download","Playtesting","Press Kit","Contact"];
 
   for(let i=0;i<pageNames.length;i++){
 
     let atag = document.createElement('a');
     atag.className = "navbaritem";
-    atag.href = pageNames[i] + ".html";
-    eachLetterSpan(atag,pageNames[i] === "index" ? "home" : pageNames[i]);
+    atag.href = pageNames[i].toLowerCase() + ".html";
+    eachLetterSpan(atag,pageNames[i] === "index" ? "Home" : pageNames[i]);
     navbar.appendChild(atag);
 
   }
