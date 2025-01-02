@@ -14,13 +14,17 @@ p{
   color: var(--DARKEST-ORANGE);
 }
 
+li{
+  text-decoration-color: var(--DARKEST-ORANGE);
+}
+
 a{
   color: yellow;
 }
 
 #main{
   width: 70%;
-  height: 100vh;
+  height: 100%;
   margin: auto;
 }
 
@@ -29,9 +33,10 @@ a{
 }
 
 #content{
-  width: 100%;
+  width: 90%;
   height: 100%;
   background-color: var(--BODY-ORANGE);
+  padding: 5%;
 }
 
 #title{
@@ -49,25 +54,49 @@ a{
 .flexbox{
   display: flex;
   padding: 0px;
+  flex-wrap: wrap;
 }
 
 #navbar{
   justify-content: space-around;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .navbaritem{
   display: inline;
-  margin: none;
-}
-
-.navbara{
-  color: yellow;
   text-decoration: none;
   font-size: 2em;
+  color: yellow;
 }
-
-
 
 #surveycontainer{
   height: 100%;
+}
+
+.container{
+  display: inline;
+  background-color: var(--BACKGROUD-ORANGE);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.letter-anim{
+  position: relative;
+  display: inline-block;
+}
+
+.navbaritem:hover > .letter-anim{
+  animation: anim 0.5s infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes anim {
+  0%,100%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
 }
