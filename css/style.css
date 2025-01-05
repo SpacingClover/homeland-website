@@ -14,11 +14,16 @@ body{
 }
 
 p, h1, h2, h3, ul, li{
-  color: var(--DARKEST-ORANGE);
+  color: black;
+}
+
+p{
+  margin-top: 0px;
 }
 
 h1{
-  margin-bottom: 0.5em;
+  text-align: center;
+  text-decoration: underline;
 }
 
 li{
@@ -137,12 +142,19 @@ span{
 
 @media (max-width: 800px) {
   .hbox{
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
   #main{
     width: 100%;
   }
   .box{
     flex: 100%;
+  }
+  .a{
+    order: 1;
+  }
+  .b{
+    order: 2;
   }
 }
