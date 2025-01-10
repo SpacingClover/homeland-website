@@ -30,9 +30,7 @@ function populateNavbar(){
   }
 }
 
-function setSansSerif(value){
-  
-}
-
 //initialization
 populateNavbar();
+
+alert(location.pathname);
