@@ -3,9 +3,14 @@
 <meta charset="UTF-8">
 <title>HOMELAND: Last Defense</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="HOMELAND, Last Defense, Steam, metroidvania">
+<meta name="description" content="HOMELAND: Last Defense is a Metroidvania 2.5D shooter involving circuitry and moving the rooms around you.">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="images/icon.ico">
 <body>
+
+
+
 
 <div id="main">
   <div id="header">
@@ -16,17 +21,20 @@
   <div id="content">
 
     <!-- CONTENTS -->
-    <div class="hbox">
-      <div class="box">
-        <ul>
-          <li><a href="#interface">The Interface</a></li>
-          <li><a href="#world">The World</a></li>
-          <li><a href="#displacement">Room Displacement</a></li>
-          <li><a href="#circuits">Circuitry</a></li>
-          <li><a href="#combat">Combat</a></li>
-          <li><a href="#missions">Missions</a></li>
-        </ul>
-      </div>
+    <div id="sidebar">
+      <h2 style="margin:2px;padding-left:1em;">Sections</h2>
+      <ul style="margin-top:2px;">
+        <li><a href="#interface">The Interface</a></li>
+        <li><a href="#world">The World</a></li>
+        <li><a href="#displacement">Room Disp.</a></li>
+        <li><a href="#circuits">Circuitry</a></li>
+        <li><a href="#combat">Combat</a></li>
+        <li><a href="#missions">Missions</a></li>
+      </ul>
+      <template>
+        <h2 style="margin:2px;padding-left:1em;">Settings</h2>
+        <input type="checkbox" id="dyslexia-font-button"><span style="font-family: sans-serif; font-weight:normal; color:black;" onchange="setSansSerif(this.checked)">Dyslexia Font</span></input>
+      </template>
     </div>
 
     <!-- THE INTERFACE -->
@@ -60,7 +68,10 @@
     </div>
     <div class="hbox">
       <div class="box a">
-        <p>The insides of cities are made up of Rooms, which can have a variety of shapes and sizes, functions, and contents. Gameplay is primarily based inside of rooms, or around the navigation between rooms.</p>
+        <br>
+        <p>The insides of cities are made up of Rooms, which can have a variety of shapes and sizes, functions, and contents.</p>
+        <p>The top left screen shows <span>Fid</span> and the inside of the current room. The rooms will contain enemies and interactables.</p>
+        <p>Rooms are connected via doors, holes, and elevators.</p>
       </div>
       <div class="box b">
         <img src="https://picsum.photos/200/135" alt="map of Orotof's cities & natural features" style="width:100%;">
@@ -99,10 +110,15 @@
       </div>
       <div class="box a">
         <p>The main character Fid was an electrician before the war, and those skills are not going to waste.</p>
-        <p>I promise, this will not be as difficult as it may seem at first</p>
-        <p>Self circuitry & picking up circuits</p>
-        <p>Circuitry on other devices (pickup from here too)</p>
-        <p>in depth explanation of the circuitry mechanic</p>
+        <p>In the circuit view, you can pick up and move circuit boards, and connect wires to them. All of this is snapped to a grid of points.</p>
+        <p>Circuitry in HOMELAND doesn't work quite the same as real life:</p>
+        <ul>
+          <p>Each circuit consumes a certain amount of power</p>
+          <p>Remainin power will exit it's output and can be distributed further</p>
+          <p>When power exits an output, it is evenly distributed between all connected inputs</p>
+          <p>Every input has an amount of <span>draw</span>, which could starve earlier circuits</p>
+        </ul>
+        <p> <span>Circuitry is still in development</span> </p>
       </div>
     </div>
 
@@ -126,9 +142,17 @@
         <img src="https://picsum.photos/200/135" alt="map of Orotof's cities & natural features" style="width:100%;">
       </div>
       <div class="box a">
-        <p>The bulk of gameplay will be during or around missions</p>
-        <p>list mission types</p>
-        <p>you can get missions by taking to people, and they might let you tag along if you have good relations with their faction</p>
+        <p>The gameplay is driven by missions, given to you by factions you have good relations with.</p>
+        <p>Choosing to accept or deny missions is your agency in the outcome of the war, whomever you assist will be given a massive advantage.</p>
+        <p>There are several types of missions:</p>
+        <ul>
+          <p>Taking control of an area</p>
+          <p>Repairing Infrastructure</p>
+          <p>Delivering supplies</p>
+          <p>Escorting civilians</p>
+          <p>Disrupting supply lines</p>
+        </ul>
+        <p>You might run into any number of unexpected confrontations in getting to the mission, or during the missions; be wary.</p>
       </div>
     </div>
 

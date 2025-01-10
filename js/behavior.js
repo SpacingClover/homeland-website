@@ -30,5 +30,9 @@ function populateNavbar(){
   }
 }
 
+function setSansSerif(value){
+  
+}
+
 //initialization
 populateNavbar();
