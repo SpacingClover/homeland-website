@@ -1,3 +1,20 @@
+function getMeta(metaName) {
+  const metas = document.getElementsByTagName('meta');
+
+  for (let i = 0; i < metas.length; i++) {
+    if (metas[i].getAttribute('name') === metaName) {
+      return metas[i].getAttribute('content');
+    }
+  }
+
+  return '';
+}
+
+function isATagCurrentPage(atagPageName){ //return bool
+  console.log(getMeta("page_name"));
+  return getMeta("page_name").toLowerCase() == atagPageName.toLowerCase();
+}
+
 function eachLetterSpan(element,string){
   for(let i=0;i<string.length;i++){
     if(string[i] == " "){
@@ -35,21 +52,46 @@ function populateNavbar(){
   }
 }
 
-function getMeta(metaName) {
-  const metas = document.getElementsByTagName('meta');
-
-  for (let i = 0; i < metas.length; i++) {
-    if (metas[i].getAttribute('name') === metaName) {
-      return metas[i].getAttribute('content');
-    }
+function initializeTitleLetters(){
+  let letterimages = document.getElementsByClassName('titleletter');
+  for(let i=0;i<letterimages.length;i++){
+    letterimages[i].style.setProperty("--i",String(i));
+    letterimages[i].setAttribute("draggable",false);
   }
-
-  return '';
 }
 
-function isATagCurrentPage(atagPageName){ //return bool
-  return getMeta("page_name").toLowerCase() == atagPageName.toLowerCase();
+const canvas = document.getElementById("canvas");
+
+function configureCanvas(){
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  canvas.style.width = String(window.innerWidth);
+  canvas.style.height = String(window.innerHeight);
+}
+
+function drawSquare(x,y,rotation){
+  const ctx = canvas.getContext("2d");
+  ctx.rotate(rotation);
+  ctx.fillStyle = "blue";
+  ctx.fillRect(x,y,10,10);
+  ctx.stroke();
+}
+
+function drawBackground(){
+  for(let i=0;i<100;i++){
+    drawSquare(Math.random()*window.innerWidth,Math.random()*window.innerHeight,Math.random()*360);
+  }
 }
 
 //initialization
 populateNavbar();
+initializeTitleLetters();
+// configureCanvas();
+// drawBackground();
+
+addEventListener("scroll",(event) => { // use this function to trigger dynamic backgrounds at different scroll levels
+  let scrollY = Number(window.scrollY);
+  let maxY = Number(window.scrollMaxY);
+  let color = scrollY > maxY/2 ? "green" : "blue";
+  //document.body.style.backgroundColor = color;
+});

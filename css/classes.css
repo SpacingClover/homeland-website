@@ -19,7 +19,7 @@
   background-color: var(--BODY-ORANGE);
   border-style: solid;
   border-color: #510;
-  border-bottom-color: #FF8100;
+  border-bottom-style: none;
   padding: 0px 3px 0px 3px;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
@@ -87,4 +87,32 @@
 .yellowbox{
   background-color:darkorange;
   padding:0.2em 1em 1em 1em;
+}
+
+.titleletter{
+  flex-grow: 1;
+  height: 100px;
+  margin-right: 10px;
+  filter: brightness(140%);
+  image-rendering: pixelated;
+  transform: scaleY(105%);
+  animation: titleflash 5s infinite;
+  animation-delay: calc(0.1s * var(--i));
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.titleletter:last-child{
+  margin-right: 0px;
+}
+
+@keyframes titleflash {
+  0%,40%,60%,100%{
+    filter: brightness(140%);
+  }
+  45%,55%{
+    filter: brightness(1000%) drop-shadow(0px 0px 5px yellow);
+  }
 }
