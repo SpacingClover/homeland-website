@@ -1,0 +1,90 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.flexbox{
+  display: flex;
+  padding: 0px;
+  flex-wrap: wrap;
+}
+
+.navbaritem{
+  display: inline;
+  text-decoration: none;
+  font-size: 2em;
+  color: yellow;
+  background-color: var(--BODY-ORANGE);
+  border-style: solid;
+  border-color: #510;
+  border-bottom-color: #FF8100;
+  padding: 0px 3px 0px 3px;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  text-shadow: none;
+  text-shadow: 1px 1px 2px #510;
+  transform: perspective(10px) rotateX(1deg);
+}
+
+.navbaritem:not(.navbaritem-unfocused){
+  text-shadow: 1px 1px 5px #510;
+}
+
+.navbaritem-unfocused{
+  transition: background-color 0.5s;
+  background-color: #CC4000;
+  border-bottom-style: solid;
+  border-bottom-color: #510;
+}
+
+.navbaritem-unfocused:hover{
+  transition: background-color 0.5s;
+  background-color: red;
+  text-shadow: 1px 1px 5px #510;
+}
+
+.container{
+  background-color: var(--BACKGROUD-ORANGE);
+  display: inline;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.letter-anim{
+  position: relative;
+  display: inline-block;
+}
+
+.navbaritem:hover > .letter-anim{
+  animation: anim 1s infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes anim {
+  0%,50%,100%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(-10px);
+  }
+}
+
+.hbox{
+  display: flex;
+  flex-direction: row;
+}
+
+.box{
+  flex: 50%;
+  padding: 10px;
+}
+
+.yellowbox{
+  background-color:darkorange;
+  padding:0.2em 1em 1em 1em;
+}

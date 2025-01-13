@@ -1,0 +1,57 @@
+:root{
+  --BACKGROUD-ORANGE:#F34B00;
+  --BODY-ORANGE:#FF7111;
+  --DARKEST-ORANGE:#B01700;
+}
+
+* {
+  font-family: pixeloidsans;
+}
+
+body{
+  background-color: var(--BACKGROUD-ORANGE);
+  padding-top: 1em;s
+}
+
+p, h1, h2, h3, ul, li{
+  color: #510;
+}
+
+p{
+  margin-top: 0px;
+  font-family: sans-serif;
+  color: #510;
+  font-size: 1.2em;
+}
+
+h1{
+  text-align: center;
+  text-decoration: underline;
+}
+
+li{
+  text-decoration-color: var(--DARKEST-ORANGE);
+}
+
+a{
+  color: #FFFF80;
+}
+
+a:hover{
+  text-shadow:0px 0px 10px yellow;
+}
+
+hr{
+  background-color: var(--BACKGROUD-ORANGE);
+  height: 5px;
+  border: none;
+}
+
+span{
+  font-weight: bold;
+}
+
+.box > img{
+  border-color: #510;
+  border-style: solid;
+}

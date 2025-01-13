@@ -22,15 +22,34 @@ function populateNavbar(){
   for(let i=0;i<pageNames.length;i++){
 
     let atag = document.createElement('a');
-    atag.className = "navbaritem";
-    atag.href = pageNames[i].toLowerCase() + ".html";
+    if(isATagCurrentPage(pageNames[i])){
+      atag.className = "navbaritem";
+    }else{
+      atag.className = "navbaritem navbaritem-unfocused";
+      atag.href = pageNames[i].toLowerCase() + ".html";
+    }
+
     eachLetterSpan(atag,pageNames[i] === "index" ? "Home" : pageNames[i]);
     navbar.appendChild(atag);
 
   }
 }
 
+function getMeta(metaName) {
+  const metas = document.getElementsByTagName('meta');
+
+  for (let i = 0; i < metas.length; i++) {
+    if (metas[i].getAttribute('name') === metaName) {
+      return metas[i].getAttribute('content');
+    }
+  }
+
+  return '';
+}
+
+function isATagCurrentPage(atagPageName){ //return bool
+  return getMeta("page_name").toLowerCase() == atagPageName.toLowerCase();
+}
+
 //initialization
 populateNavbar();
-
-alert(location.pathname);
