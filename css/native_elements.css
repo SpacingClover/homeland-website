@@ -51,7 +51,7 @@ span{
   font-weight: bold;
 }
 
-.box > img{
+.box > img, video{
   border-color: #510;
   border-style: solid;
 }

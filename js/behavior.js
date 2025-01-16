@@ -78,6 +78,8 @@ function drawSquare(x,y,rotation){
 }
 
 function drawBackground(){
+  const ctx = canvas.getContext("2d");
+  ctx.clearRect(0,0,canvas.width,canvas.height);
   for(let i=0;i<100;i++){
     drawSquare(Math.random()*window.innerWidth,Math.random()*window.innerHeight,Math.random()*360);
   }
@@ -86,8 +88,8 @@ function drawBackground(){
 //initialization
 populateNavbar();
 initializeTitleLetters();
-// configureCanvas();
-// drawBackground();
+//configureCanvas();
+//drawBackground();
 
 addEventListener("scroll",(event) => { // use this function to trigger dynamic backgrounds at different scroll levels
   let scrollY = Number(window.scrollY);
@@ -95,3 +97,5 @@ addEventListener("scroll",(event) => { // use this function to trigger dynamic b
   let color = scrollY > maxY/2 ? "green" : "blue";
   //document.body.style.backgroundColor = color;
 });
+
+//setInterval(drawBackground,1);

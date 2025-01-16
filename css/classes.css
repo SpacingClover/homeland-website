@@ -74,25 +74,16 @@
   }
 }
 
-.hbox{
-  display: flex;
-  flex-direction: row;
-}
-
-.box{
-  flex: 50%;
-  padding: 10px;
-}
-
 .yellowbox{
   background-color:darkorange;
   padding:0.2em 1em 1em 1em;
 }
 
 .titleletter{
-  flex-grow: 1;
   height: 100px;
   margin-right: 10px;
+  display: block;
+
   filter: brightness(140%);
   image-rendering: pixelated;
   transform: scaleY(105%);
@@ -102,10 +93,15 @@
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
+
+}
+
+.titleletter:first-child{
+  margin-left: auto;
 }
 
 .titleletter:last-child{
-  margin-right: 0px;
+  margin-right: auto;
 }
 
 @keyframes titleflash {
