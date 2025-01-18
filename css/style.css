@@ -80,16 +80,29 @@
   .b{
     order: 2;
   }
-  .navbaritem{
-    font-size: 1.4em;
-    padding: 0.2em;
-  }
   .hidesmall{
     display: none;
     width: 0px;
   }
   .titleletter:nth-child(8){
     margin-right: auto;
+  }
+}
+@media (max-width: 1451px) {
+  .navbaritem > span{
+    font-size: 2vw;
+    transform: translateY(-10px);
+  }
+  .navbaritem{
+    margin-left: 0px;
+    margin-right: 0px;
+    flex-grow: 1;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #navbar{
+    transform: translateY(5px);
   }
 }
 

@@ -92,9 +92,7 @@ initializeTitleLetters();
 //drawBackground();
 
 addEventListener("scroll",(event) => { // use this function to trigger dynamic backgrounds at different scroll levels
-  let scrollY = Number(window.scrollY);
-  let maxY = Number(window.scrollMaxY);
-  let color = scrollY > maxY/2 ? "green" : "blue";
+  console.log(window.innerWidth);
   //document.body.style.backgroundColor = color;
 });
 
